@@ -1,0 +1,59 @@
+/* Removemos o estilo padrão que travava o layout no centro */
+#root {
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 2rem; -> Removido para a navbar encostar nas bordas */
+  /* text-align: center; -> Removido para não centralizar textos indesejados */
+}
+
+/* --- Estilos Gerais do App --- */
+.container-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container-principal h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center; /* Título centralizado fica bom */
+}
+
+/* --- O GRID MÁGICO (Responsivo) --- */
+.produtos-grid {
+  display: grid;
+  /* Cria colunas automáticas: Mínimo 280px, Máximo 1 fração do espaço */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem; /* Espaço entre os cards */
+  justify-items: center; /* Centraliza o card dentro do seu espaço */
+  padding-bottom: 4rem;
+}
+
+/* --- Estilos Antigos (Mantidos por segurança) --- */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Classes utilitárias que você já tinha */
+.vermelho { background-color: #ef4444; color: white; }
+.verde { background-color: #22c55e; color: white; }
